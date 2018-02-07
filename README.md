@@ -38,3 +38,19 @@ Then assign the directories to their owners.
 [root@ip-172-31-33-3 tmp]# chown -r alice:alice /tmp/testdir/alice_test_dir
 [root@ip-172-31-33-3 tmp]# chown -r bob:bob /tmp/testdir/bob_test_dir
 ```
+
+Make a script that will run the content of each of the files in alice's directory. This would be analagous to a service or job from cron.d, though simplier.
+
+vi testscript.sh
+
+```
+echo "#!/bin/bash
+
+set -x
+for i in `cat /tmp/testdir/alice_test_dir/test_ww_file.txt`
+do
+echo $i
+done
+       " > testscript.sh
+```
+
