@@ -1,6 +1,10 @@
 # UnderstandingWorldWritablePermissions
 
-## An example
+# This project will walk through some (hopefully) interesting concepts around world writable files. 
+
+I will probably break this up into sub projects so each can shine the light on an individual idea. 
+
+## An example for the parent directory and subdirectory execute bits impact
 
 In this example we will have three users, each with their own directory and subdirectory, as well as a file in each. 
 
